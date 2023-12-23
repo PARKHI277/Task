@@ -61,7 +61,7 @@ Router.get("/refresh-token", getRefreshToken);
     Query: oldPassword,newPassword
     DESCRIPTION:  reset password
 **/
-Router.post("/reset-password/:id", isUserAuthorized, resSetPassword);
+Router.post("/reset-password", isUserAuthorized, resSetPassword);
 
 /*
     METHOD : GET
@@ -76,7 +76,7 @@ Router.get("/all", getAllUsers);
     DESCRIPTION: get User by id
 **/
 
-Router.get("/:id", isUserAuthorized, getUserById);
+Router.get("/:id", getUserById);
 
 /*
     METHOD : PUT

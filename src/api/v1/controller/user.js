@@ -186,7 +186,7 @@ const getUserById = async (req, res) => {
 
 const resSetPassword = async (req, res) => {
   try {
-    const userId = req.params.id;
+    const userId = req.user.userId;
 
     const { oldPassword, newPassword } = req.body;
     const passwordRegex =
